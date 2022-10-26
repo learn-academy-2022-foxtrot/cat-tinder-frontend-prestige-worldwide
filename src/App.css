@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #d6d9dd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+.header-container{
+  position:sticky;
+  top: 0;
+
+}
+.logo-text{
+  font-size: 4em;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+.footer-container {
+  color: rgb(234, 234, 234);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;   /* Height of the footer */
+  background:  rgb(221, 90, 57);
+}
+
+.home-container{
+  color: rgb(221, 90, 57);
+}
+.not-found-text{
+  color: crimson;
 }

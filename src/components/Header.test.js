@@ -10,7 +10,7 @@ describe("<Header/>", () => {
                 <Header/>
             </BrowserRouter>
         )
-        const element = screen.getByText("Prestige Worldwide Memes")
+        const element = screen.getByText("Prestige Worldwide")
         expect(element).toBeInTheDocument()
     })
 

@@ -22,13 +22,13 @@ const Header = () => {
     const toggle = () => setIsOpen(!isOpen);
     return (
 
-        <div className='header-container'>
+        <div data-testid='testHeaderNav' className='header-container'>
 
 
             <Navbar >
 
                 <NavbarBrand href="/" >
-                    <h1 className='logo-text'>Prestige WorldWide Memes</h1>
+                    <h1 className='logo-text'>Prestige Worldwide Memes</h1>
                 </NavbarBrand>
 
                 <br></br>

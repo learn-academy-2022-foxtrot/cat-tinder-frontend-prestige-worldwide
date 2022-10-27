@@ -15,7 +15,7 @@ import {
 
 import { useState } from 'react';
 
-const Header = (args) => {
+const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +25,7 @@ const Header = (args) => {
         <div className='header-container'>
 
 
-            <Navbar {...args}>
+            <Navbar >
 
                 <NavbarBrand href="/" >
                     <h1 className='logo-text'>Prestige WorldWide Memes</h1>

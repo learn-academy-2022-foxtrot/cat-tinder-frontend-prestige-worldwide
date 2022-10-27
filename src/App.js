@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <Header></Header>
+        <Header/>
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,7 +35,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
 
-        <Footer></Footer>
+        <Footer/>
       </div>
     </div>
   )

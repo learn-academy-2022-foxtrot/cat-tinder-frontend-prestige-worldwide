@@ -1,6 +1,4 @@
-
-import { Navbar } from 'reactstrap';
-import { NavbarBrand } from 'reactstrap'
+import { Navbar, NavbarBrand } from 'reactstrap'
 
 
 const Footer = () => {

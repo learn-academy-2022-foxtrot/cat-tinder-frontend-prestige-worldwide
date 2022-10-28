@@ -36,7 +36,7 @@ const Header = () => {
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="me-auto" navbar>
                             <NavItem>
-                                <NavLink href="/index">Show</NavLink>
+                                <NavLink href="/index">Browse</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/new">Add Memes</NavLink>

@@ -27,7 +27,7 @@ const App = () => {
         <Header/>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home memes = {memes}/>} />
           <Route path="/index" element={<MemeIndex memes = {memes} />} />
           <Route path="/show/:id" element={<MemeShow memes = {memes}/>} />
           <Route path="/new" element={<MemeNew />} />

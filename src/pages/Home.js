@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { Card, CardImg, CardBody, CardColumns, CardSubtitle, CardText, CardTitle, Button } from "reactstrap"
 
-const Home = () => {
+const Home = ({memes}) => {
     const [ memeApiData, setMemeApiData] = useState(null)
 
     const getMemes = () => {
@@ -16,8 +16,8 @@ const Home = () => {
  
     console.log('test', )
     console.log(memeApiData)
-    let memeArr =[]
-    console.log(memeArr)
+    let memeArr = memes.memes 
+    
     return (
 
         <div className="home-container">

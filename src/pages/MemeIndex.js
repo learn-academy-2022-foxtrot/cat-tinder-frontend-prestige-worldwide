@@ -12,7 +12,7 @@ const MemeIndex = ({ memes }) => {
                     <CardColumns key={index}
                         style={{width: '69%',padding: "24px",backgroundColor: "#ded8d1", flex:"wrap" , borderRadius:"10px",margin:"2%"}}>
                         <Card style={{ backgroundColor: " #f2b740" }} >
-                            <a style={{cursor: 'pointer'}} to={`/show/${meme}`}>
+                            <a style={{cursor: 'pointer'}} href={`/show/${index}`}>
                                         <CardImg 
                                 alt="Card image cap"
                                 src={`${meme.url}`}

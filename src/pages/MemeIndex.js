@@ -2,12 +2,10 @@ import { Card, CardImg, CardBody, CardColumns, CardSubtitle, CardText, CardTitle
 
 const MemeIndex = ({ memes }) => {
 
-    let memeArr = memes.memes
-    console.log(memeArr)
     return (
         <>
             <h1>MemeShow</h1>
-                {memeArr.map((meme, index) => {    
+                {memes?.map((meme, index) => {    
                     return(
                     <CardColumns key={index}
                         style={{width: '69%',padding: "24px",backgroundColor: "#ded8d1", flex:"wrap" , borderRadius:"10px",margin:"2%"}}>

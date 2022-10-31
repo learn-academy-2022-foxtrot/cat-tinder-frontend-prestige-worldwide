@@ -3,8 +3,8 @@ import { useState } from "react"
 import { Card, CardImg, CardBody, CardColumns, CardSubtitle, CardText, CardTitle, Button } from "reactstrap"
 
 const Home = ({memes}) => {
-    const [ memeApiData, setMemeApiData] = useState(null)
-
+    const [ memeApiData, setMemeApiData] = useState([])
+    console.log("MEMES: ", memes)
     const getMemes = () => {
     
         fetch(`https://meme-api.herokuapp.com/gimme/10`)
@@ -16,13 +16,12 @@ const Home = ({memes}) => {
  
     console.log('test', )
     console.log(memeApiData)
-    let memeArr = memes.memes 
     
     return (
 
         <div className="home-container">
             <h2>Meme Home</h2>
-            {memeArr.map((meme, index) => {    
+            {memes?.map((meme, index) => {    
                     return(
                     <CardColumns key={index}
                         style={{width: '69%',padding: "24px",backgroundColor: "#ded8d1", flex:"wrap" , borderRadius:"10px",margin:"2%"}}>

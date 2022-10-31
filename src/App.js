@@ -27,9 +27,9 @@ const App = () => {
         <Header/>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/index" element={<MemeIndex />} />
-          <Route path="/show" element={<MemeShow />} />
+          <Route path="/" element={<Home memes = {memes}/>} />
+          <Route path="/index" element={<MemeIndex memes = {memes} />} />
+          <Route path="/show/:id" element={<MemeShow memes = {memes}/>} />
           <Route path="/new" element={<MemeNew />} />
           <Route path="/edit" element={<MemeEdit />} />
           <Route path="*" element={<NotFound />} />

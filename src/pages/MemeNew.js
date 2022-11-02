@@ -8,14 +8,14 @@ const MemeNew = ({ createMeme }) => {
     const navigate = useNavigate()
     const [newMeme, setNewMeme] = useState({
         title: "",
-        likes: "",
-        dislikes: 0,
+        likes: "0",
+        dislikes: "0",
         image: "",
-        description: "",
+        description: ""
     })
 
     const handleChange = (e) => {
-        setNewMeme({ ...newMeme, [e.target.title]: e.target.value })
+        setNewMeme({ ...newMeme, [e.target.name]: e.target.value })
     }
 
     const handleSubmit = () => {

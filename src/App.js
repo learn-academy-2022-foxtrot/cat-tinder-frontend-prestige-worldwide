@@ -17,10 +17,21 @@ import mockMemes from "./mockMemes";
 const App = () => {
 
   const [memes, setMemes] = useState([])
+  const [memeApiData, setMemeApiData] = useState({"count":1,"memes":[{"postLink":"","subreddit":"","title":"","url":"https://i.redd.it/ha31m1oa3gw91.jpg","nsfw":false,"spoiler":false,"author":"","ups":6869,"preview":[""]}]})
 
   useEffect(() => {
     readMeme()
+    getMemes()
   }, [])
+
+  const getMemes = () => {
+
+    fetch('https://meme-api.herokuapp.com/gimme/50')
+        .then(response => response.json())
+        .then(dataPayload => setMemeApiData(dataPayload))
+        .catch(error => console.log(error))
+
+}
 
   const readMeme = () => {
     fetch("http://localhost:3000/memes")
@@ -31,12 +42,12 @@ const App = () => {
     .catch((error) => console.log(error))
   }
 
-  const createMeme = (newMemes) => {
-    console.log("NEW MEME", newMemes)
+  const createMeme = (newMeme) => {
+    console.log("NEW MEME", newMeme)
     fetch("http://localhost:3000/memes", {
-      body: JSON.stringify(newMemes),
-      header: {
-        "Content-Type": "application.json"
+      body: JSON.stringify(newMeme),
+      headers: {
+        "Content-Type": "application/json"
       },
       method: "POST"
     })
@@ -51,7 +62,7 @@ const App = () => {
         <Header/>
 
         <Routes>
-          <Route path="/" element={<Home memes = {memes}/>} />
+          <Route path="/" element={<Home memeApiData={memeApiData} createMeme = {createMeme}/>} />
           <Route path="/index" element={<MemeIndex memes = {memes} />} />
           <Route path="/show/:id" element={<MemeShow memes = {memes}/>} />
           <Route path="/new" element={<MemeNew createMeme = {createMeme}/>} />

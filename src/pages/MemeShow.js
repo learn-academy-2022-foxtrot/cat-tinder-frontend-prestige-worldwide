@@ -5,12 +5,13 @@ import { Card, CardImg, CardBody, CardColumns, CardSubtitle, CardText, CardTitle
 const MemeShow = ({memes}) => {
     
     const { id } = useParams()
-    let memesArr = memes.memes
+    console.log(memes)
+    // let memesArr = memes.memes
 
 
-    let showMeme = memesArr[id]
-    // let showMeme = memesArr?.find(item => item.id === +id)
-
+    // let showMeme = memesArr[id]
+    let showMeme = memes?.find(item => item.id === +id)
+    console.log(showMeme)
     return (
 
         <>
@@ -20,7 +21,7 @@ const MemeShow = ({memes}) => {
                         <Card style={{ backgroundColor: " #f2b740" }}>
                             <CardImg
                                 alt="Card image cap"
-                                src={`${showMeme.url}`}
+                                src={showMeme.image}
                                 top
                                 width="100%"
                             />
@@ -32,7 +33,7 @@ const MemeShow = ({memes}) => {
                                     className="mb-2 text-muted"
                                     tag="h6"
                                 >
-                                    {`Created by: ${showMeme.author}`}
+                                    Created by: {showMeme.author}
                                 </CardSubtitle>
                     
                                 <Button>

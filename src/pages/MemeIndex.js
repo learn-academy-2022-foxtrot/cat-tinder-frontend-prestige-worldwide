@@ -8,26 +8,27 @@ const MemeIndex = ({ memes }) => {
                 {memes?.map((meme, index) => {    
                     return(
                     <CardColumns key={index}
-                        style={{width: '69%',padding: "24px",backgroundColor: "#ded8d1", flex:"wrap" , borderRadius:"10px",margin:"2%"}}>
+                        style={{width: '45%',padding: "24px",backgroundColor: "#ded8d1", flex:"wrap" , borderRadius:"10px",margin:"2%"}}>
                         <Card style={{ backgroundColor: " #f2b740" }} >
-                            <a style={{cursor: 'pointer'}} href={`/show/${index}`}>
+                                         <CardTitle tag="h5">
+                                    {meme.title}
+                                </CardTitle> 
+                                <a style={{cursor: 'pointer'}} href={`/show/${meme.id}`}>
                                         <CardImg 
                                 alt="Card image cap"
-                                src={`${meme.url}`}
+                                src={`${meme.image}`}
                                 top
                                 width="100%"
                             />
                             </a>
                     
                             <CardBody >
-                                <CardTitle tag="h5">
-                                    {meme.title}
-                                </CardTitle>
+                  
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
                                 >
-                                    {`Created by: ${meme.author}`}
+                                    {`Created by: ${meme.description}`}
                                 </CardSubtitle>
                     
                                 <Button>
